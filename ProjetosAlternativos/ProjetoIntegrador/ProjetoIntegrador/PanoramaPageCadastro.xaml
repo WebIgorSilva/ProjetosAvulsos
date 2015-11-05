@@ -1,0 +1,69 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="ProjetoIntegrador.PanoramaPageCadastro"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot contains the root grid where all other page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="/Assets/FundoVerde.jpg"/>
+        </Grid.Background>
+        <phone:Panorama Title="Cadastro">
+
+            <!--Panorama item one-->
+            <phone:PanoramaItem Header="Login">
+                <Grid>
+                    <TextBlock ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,68,0,-71" TextWrapping="Wrap" Text="Crie sua conta e tenha acesso
+                               a todas as vagas disponíveis e candidate-se a a que mais se encaixa no seu perfil.
+                               Não perca tempo! O mercado de trabaho está a sua espera.
+                        " VerticalAlignment="Top" Height="486" Width="412" FontSize="24"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Text="Cadastro" VerticalAlignment="Top" Width="396" FontSize="36"/>
+                </Grid>
+            </phone:PanoramaItem>
+
+            <!--Panorama item two-->
+            <phone:PanoramaItem Header="">
+                <Grid>
+                    <ScrollViewer>
+                        <StackPanel Orientation="Vertical" Margin="15,0">
+                            <TextBlock Text="Nome" FontSize="36" Width="360"/>
+                            <TextBox/>
+                            <TextBlock Text="Email" FontSize="36" Width="360"/>
+                            <TextBox InputScope="EmailUserName"/>
+                            <RadioButton Content="Masculino" GroupName="GrupoSexo"/>
+                            <RadioButton GroupName="GrupoSexo" Content="Feminino" />
+                            <TextBlock Text="Senha" FontSize="36" Width="360"/>
+                            <PasswordBox/>
+                            <TextBlock Text="Confirme a senha" FontSize="36" Width="360"/>
+                            <PasswordBox/>
+                            <CheckBox Content="Deseja receber e-mails"/>
+                            <Button x:Name="CadastrarButton" Content="Cadastrar" Click="CadastrarButton_Click">
+                                <Button.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFD7E6D7" Offset="0"/>
+                                        <GradientStop Color="#FF0A800A" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Button.Background>
+                            </Button>
+
+
+                        </StackPanel>
+                    </ScrollViewer>
+
+                </Grid>
+            </phone:PanoramaItem>
+        </phone:Panorama>
+    </Grid>
+
+</phone:PhoneApplicationPage>

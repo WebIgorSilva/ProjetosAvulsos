@@ -1,0 +1,77 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="ProjetoIntegrador.PivotPageDetalheVaga"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="/Assets/fundoRoxo.jpg"/>
+        </Grid.Background>
+        <!--Pivot Control-->
+        <phone:Pivot Title="Detalhe Vaga">
+
+            <!--Pivot item one-->
+            <phone:PivotItem Header="Vaga01">
+                <Grid Margin="0,0,0,0">
+                    <TextBlock HorizontalAlignment="Center" Text="JobIn Desenvolvimento de Softwares." Margin="33.223,0,32.777,559.403" Width="390" FontSize="24" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <TextBlock.Foreground>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF44129C" Offset="0"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </TextBlock.Foreground>
+
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Text="Detalhe sobre a vaga" FontSize="36" FontFamily="Global User Interface" Margin="0,50,0,0">
+                        <TextBlock.Foreground>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF44129C" Offset="0"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                    <Button x:Name="EnviarButton1" Content="Enviar Curriculo" HorizontalAlignment="Left" Margin="10,531,0,0" VerticalAlignment="Top" Width="446" Click="EnviarButton1_Click"/>
+                </Grid>
+            </phone:PivotItem>
+
+            <!--Pivot item two-->
+            <phone:PivotItem Header="Vaga02">
+                <Grid Margin="0,0,0,0">
+                    <TextBlock HorizontalAlignment="Center" Text="JobIn Desenvolvimento de Softwares." Margin="33.223,0,32.777,559.403" Width="390" FontSize="24" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <TextBlock.Foreground>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF44129C" Offset="0"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </TextBlock.Foreground>
+
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Text="Detalhe sobre a vaga" FontSize="36" FontFamily="Global User Interface" Margin="0,50,0,0">
+                        <TextBlock.Foreground>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF44129C" Offset="0"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                    <Button x:Name="EnviarButton2" Content="Enviar Curriculo" HorizontalAlignment="Left" Margin="10,531,0,0" VerticalAlignment="Top" Width="446" Click="EnviarButton2_Click"/>
+                   
+                </Grid>
+                
+            </phone:PivotItem>
+             
+        </phone:Pivot>
+    </Grid>
+
+</phone:PhoneApplicationPage>
